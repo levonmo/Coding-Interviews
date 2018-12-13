@@ -3,8 +3,10 @@ public class 九大排序算法 {
 
     public static void main(String[] args) {
         int[] arr = new int[]{2,132,123,234,33,5,6,21,123,55,414,4353,7};
+        print(arr);
 //        selectionSort(arr);
 //        bubbleSort(arr);
+//
         insertionSort(arr);
         print(arr);
 
@@ -48,14 +50,14 @@ public class 九大排序算法 {
         return arr;
     }
 
-    //插入排序，每次从后面选取一个数向前面已经排好序的数组 选择合适的位置插入
+    //插入排序，每次从后面选取一个数向前面已经排好序的数组 选择合适的位置插入,对于有序的数组该算法的效率比较高
     public static int[] insertionSort(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
-            for (int ii = i; ii > 0; i--) {
+            for (int ii = i; ii > 0; ii--) {
                 if (arr[ii] < arr[ii - 1]) {
                     int temp = arr[ii];
                     arr[ii] = arr[ii - 1];
-                    arr[ii - 1] = arr[ii];
+                    arr[ii - 1] = temp;
                 } else {
                     break;
                 }
