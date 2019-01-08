@@ -19,6 +19,7 @@ public class 和为S的连续正数序列 {
      *   3）由题可知n >= 2，那么n的最大值是多少呢？我们完全可以将n从2到S全部遍历一次，但是大部分遍历是不必要的。
      *      为了让n尽可能大，我们让序列从1开始，
      *      根据等差数列的求和公式：S = (1 + n) * n / 2，得到n <= Math.sqrt(2 * S)
+     *
      */
     public static ArrayList<ArrayList<Integer>> FindContinuousSequence(int sum) {
         ArrayList<ArrayList<Integer>> lists = new ArrayList<ArrayList<Integer>>();
